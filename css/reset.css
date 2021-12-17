@@ -1,0 +1,29 @@
+@charset 'utf-8';
+
+@font-face{font-family: NanumSquare;
+  font-style: normal; font-weight: 400;  /*노말*/
+  src: local(NanumSquareR);
+  src: url(font/NanumSquareR.eot), /*IE 6~8 호환성보기*/
+       url(font/NanumSquareR.woff) format('woff'), /*그 외 브라우저*/
+       url(font/NanumSquareR.woff2) format('woff2') /*IE 9*/  ;}       
+  @font-face{font-family: NanumSquare;
+  font-style: normal; font-weight: 800; /*볼드*/
+  src: local(NanumSquareB);
+  src: url(font/NanumSquareB.eot), /*IE 6~8 호환성보기*/
+       url(font/NanumSquareB.woff) format('woff'), /*그 외 브라우저*/
+       url(font/NanumSquareB.woff2) format('woff2') /*IE 9*/  ;}      
+
+*{margin: 0; padding: 0;}
+/*구버전 IE 시멘틱태그 사용 - html5shiv.js*/
+header, nav, section, footer, aside, figure, figcaption{display: block;}
+body{font-family: NanumSquare, sans-serif; font-size: 16px; font-weight: 400; 
+  line-height: 1.35; color: #333;}
+ul, ol{list-style: none;}
+table{border-collapse: collapse; border-spacing: 0;}
+a{text-decoration: none; color: #333;}
+img{vertical-align: top; border: 0;}
+input, select, button{vertical-align: top;}
+
+/*float을 사용 할 때 엄마에게 clear
+클래스 추가*/
+.clear::after{content: ''; display: block; clear: both;}

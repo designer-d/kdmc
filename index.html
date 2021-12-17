@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KD M&C</title>
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/jquery-1.12.3.js"></script>
+  <script src="js/jquery.stellar.js"></script>
+  
+  <script>
+    $(document).ready(function(){ //시작
+  
+      $(document).scroll(function(){
+  
+      var scrollPos = $(document).scrollTop(); //브라우저의 수직 스크롤 좌표값.
+  
+        //트랜지션이 실행 되어야 할 시점의 좌표값.
+        var t1 = $(".tran01").offset().top;
+        var t2 = $(".tran02").offset().top;
+        var t3 = $(".tran03").offset().top;
+        var t4 = $(".tran04").offset().top;
+        console.log(t1, t2, t3, t4);
+  
+        if(scrollPos > 300 ){
+        $("header").addClass("bg")
+      } else {$(".header").removeClass("bg")}
+  
+      if(scrollPos > 500 ){
+        $(".tran01").addClass("up")
+      } else {$(".tran01").removeClass("up")}
+  
+      if(scrollPos > t1 && scrollPos <= t2){
+        $(".tran02").addClass("right")
+      } else {$(".tran02").removeClass("right")}
+  
+      if(scrollPos > t1 && scrollPos <= t2){
+        $(".tran03").addClass("left")
+      } else {$(".tran03").removeClass("left")}
+  
+      if(scrollPos > 2000){
+        $(".btn_box").addClass("btn_up")
+      } else {$(".btn_box").removeClass("btn_up")}
+  
+      $("go_top").click(function(){
+      $("html, body").animate({scrollTop: 0})
+    });
+  
+      });
+      $(function(){
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 50
+			});
+		});
+    });//끝
+    </script>
+  
+</head>
+<body>
+  <div id="wrap">
+    <form action="" method="">
+  
+      <header>
+        <div class="inner">
+          <h1><a href="index.html">KD M&C</a></h1>
+          <nav>
+            <ul class="clear"> <!--reset.css에서 미리 정해놓은 클래스 적용-->
+              <li><a href="sub01.html">회사소개</a></li>
+              <li><a href="#">사업영역</a></li>
+              <li><a href="#">포트폴리오</a></li>
+              <li><a href="#">고객지원</a></li>
+              <li><a href="#">제작의뢰</a></li>
+            </ul>
+          </nav>
+        <div class="search">
+          <fieldset>
+            <legend>검색어입력</legend><!--필드셋의 타이틀-->
+            <label for="search">검색</label>
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+            <button type="button">검색버튼</button> <!--버튼 타입 필수!-->
+          </fieldset>
+        </div><!--.search-->
+       </div><!--.inner-->
+      </header>
+      
+  <div id="container" class="">
+    <div class="visual photo0 test1" data-stellar-background-ratio="0.1">
+      <div class="inner">
+        <div class="visual_img">
+          <p class="sub_tit01">Corporate Philosophy</p>
+          <h2>최고의 경험으로<br>고객을 감동시킵니다</h2>
+          <p class="sub_tit02">노력을 바탕으로 고객만족을 넘어<br>
+             진실된 서비스를 약속드립니다.</p>
+            
+          <a href="sub01.html" class="more">자세히 보기</a>
+        </div><!--.visual_img-->
+
+        <div class="paging">
+          <ul  class="clear">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+          </ul>
+        </div><!--.paging-->
+      </div><!--.inner-->
+    </div><!--.visual-->
+  </div><!--.container-->
+
+
+  <div class="business photo0 test2" data-stellar-background-ratio="0.3" >
+    <div class="inner">
+      <h3>Our Business</h3>
+      <ul class="list clear tran01">
+        <li class="photo1 photo">
+          <p class="tit">Portfolio</p>
+          <h4>호텔 메리야스<br>설치사례</h4>
+          <p class="date">2021. 08 ~ 2021. 09</p>
+          <a href="#" class="more_view">자세히보기</a>
+        </li>
+        <li class="solid">
+          <p class="tit">Product</p>
+          <h4>웨이브형<br>내진물탱크</h4>
+          <p class="date">Wave Stainless Water Tank</p>
+          <a href="#" class="more_view">자세히보기</a>
+        </li>
+        <li class="photo2 photo">
+          <p class="tit">Portfolio</p>
+          <h4>(주)나라그룹<br>설치사례</h4>
+          <p class="date">2021. 09 ~ 2021. 10</p>
+          <a href="#" class="more_view">자세히보기</a>
+        </li>
+        <li class="solid">
+          <p class="tit">Product</p>
+          <h4>직화식 콘덴싱 <br>가스온수보일러</h4>
+          <p class="date">Condensing Gas Boiler</p>
+          <a href="#" class="more_view">자세히보기</a>
+        </li>
+        <li class="solid">
+          <p class="tit">Product</p>
+          <h4>완전제어형<br>가스온수보일러</h4>
+          <p class="date">Gas Hot Water Boiler</p>
+          <a href="#" class="more_view">자세히보기</a>
+        </li>
+        <li class="photo3 photo">
+          <p class="tit">Portfolio</p>
+          <h4>서울시민병원<br>설치사례</h4>
+          <p class="date">2021. 10 ~ 2021. 11</p>
+          <a href="#" class="more_view">자세히보기</a>
+        </li>
+        <li class="solid">
+          <p class="tit">Product</p>
+          <h4>튜브타입<br>순간온수가열기</h4>
+          <p class="date">Shell & Tube Type</p>
+          <a href="#" class="more_view">자세히보기</a>
+        </li>
+        <li class="photo4 photo">
+          <p class="tit">Portfolio</p>
+          <h4>국제대학교<br>설치사례</h4>
+          <p class="date">2021.12</p>
+          <a href="#" class="more_view">자세히보기</a>
+        </li>
+      </ul>
+    </div><!--.inner-->
+  </div><!--.business-->
+
+  <div class="photo0 test3" data-stellar-background-ratio="0.5">
+  <div class="board">
+    <div class="inner clear">
+      <div class="board_box">
+        <h3>공지사항</h3>
+        <a href="#" class="all_view">전체보기 &gt;</a>
+        <ul class="list tran02">
+          <li>
+            <a href="#" class="clear">
+              <strong>[공지] 리뉴얼 오픈 이벤트 당첨자 발표</strong>
+              <span>2021. 12. 20</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="clear">
+              <strong>[공지] 시스템 점검 안내 Ver.1.2</strong>
+              <span>2021. 12. 10</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="clear">
+              <strong>[공지] 홈페이지 리뉴얼 오픈 이벤트!</strong>
+              <span>2021. 12. 06</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="clear">
+              <strong>[공지] KD M&C 홈페이지 이전 안내
+              </strong>
+              <span>2021. 11. 26</span>
+            </a>
+          </li>
+        </ul>
+      </div><!--.board_box-->
+
+      <div class="board_box">
+        <h3>뉴스</h3>
+        <a href="#" class="all_view">전체보기 &gt;</a>
+        <ul class="list tran03">
+          <li>
+            <a href="#" class="clear">
+              <strong>[뉴스] KD M&C '설비부문 소비자만족도 1위' 쾌거</strong>
+              <span>2021. 12. 20</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="clear">
+              <strong>[뉴스] KD M&C, 에너지손실방지 특허출원</strong>
+              <span>2021. 12. 19</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="clear">
+              <strong>[뉴스] 미국 MNB사 제품 독점공급계약</strong>
+              <span>2021. 11. 10</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="clear">
+              <strong>[뉴스] KD M&C, 세계최초 완전제어방식 솔루션 출시
+              </strong>
+              <span>2021. 10. 09</span>
+            </a>
+          </li>
+        </ul>
+      </div><!--.board_box-->
+  </div><!--.inner-->
+  </div><!--.board-->
+
+  
+  <div class="request">
+    <div class="inner">
+      <p class="sub_txt">KD Machine & Construction</p>
+      <p class="main_txt">고객만족을 1번으로 생각합니다.</p>
+      <div class="btn_box tran04">
+        <a href="#">제품 의뢰하기</a>
+        <a href="#">유지보수 문의</a>
+      </div><!--.btn_box-->
+    </div><!--.inner-->
+  </div><!--.request-->
+</div><!--.container-->
+</div><!--photo0 test3-->
+<footer>
+  <div class="inner">
+    <div class="f_info">
+    <address>주소 : 경기도 수원시 영통구 덕영대로 1234 KD M&C</address>
+    <p><span>TEL : 031-123-1234</span><span>FAX : 031-123-1234</span></p>
+    <p>Copyright (c)2021 KD M&C All rights reserved.</p>
+  </div><!--#f_info-->
+  </div><!--#inner-->
+</footer>
+
+
+<a href="#" class="go_top">맨위로이동</a>
+
+  
+    </form>
+  </div><!--#wrap-->
+</body>
+</html>

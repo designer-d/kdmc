@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KD M&C</title>
+  <link href="css/reset.css" rel="stylesheet"> 
+  <link href="css/main.css" rel="stylesheet"> 
+  <script src="js/jquery-1.12.3.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <form action="" method="">
+    
+    <header>
+      <div class="inner">
+        <h1><a href="index.html">KD M&C</a></h1>
+        <nav>
+          <ul class="clear"> <!--reset.css에서 미리 정해놓은 클래스 적용-->
+            <li><a href="sub01.html">회사소개</a></li>
+            <li><a href="#">사업영역</a></li>
+            <li><a href="#">포트폴리오</a></li>
+            <li><a href="#">고객지원</a></li>
+            <li><a href="#">제작의뢰</a></li>
+          </ul>
+        </nav>
+      <div class="search">
+        <fieldset>
+          <legend>검색어입력</legend><!--필드셋의 타이틀-->
+  
+          <label for="search">검색</label>
+          <input type="text" id="search" placeholder="검색어를 입력하세요">
+          <button type="button">검색버튼</button> <!--버튼 타입 필수!-->
+        </fieldset>
+      </div><!--.search-->
+      </div><!--.inner-->
+      <script>
+        $(document).ready(function(){ //시작
+      
+          $(document).scroll(function(){
+      
+          var scrollPos = $(document).scrollTop(); //브라우저의 수직 스크롤 좌표값.
+      
+            //트랜지션이 실행 되어야 할 시점의 좌표값.
+            var t1 = $(".tran01").offset().top;
+            var t2 = $(".tran02").offset().top;
+            var t3 = $(".tran03").offset().top;
+            var t4 = $(".tran04").offset().top;
+            console.log(t1, t2, t3, t4);
+      
+            if(scrollPos > 300 ){
+            $("header").addClass("bg")
+          } else {$(".header").removeClass("bg")}
+      
+          if(scrollPos > 500 ){
+            $(".tran01").addClass("up")
+          } else {$(".tran01").removeClass("up")}
+      
+          if(scrollPos > t1 && scrollPos <= t2){
+            $(".tran02").addClass("right")
+          } else {$(".tran02").removeClass("right")}
+      
+          if(scrollPos > t1 && scrollPos <= t2){
+            $(".tran03").addClass("left")
+          } else {$(".tran03").removeClass("left")}
+      
+          if(scrollPos > 1500){
+            $(".btn_box").addClass("btn_up")
+          } else {$(".btn_box").removeClass("btn_up")}
+      
+          $("go_top").click(function(){
+          $("html, body").animate({scrollTop: 0})
+        });
+      
+          });
+          
+        });//끝
+        </script>
+    </header>
+     
+    <div id="sub_container">
+      
+  
+      <div class="intro ">
+        <div class="inner ">
+          <h2>We are the best team</h2>
+          <p>풍부한 경험을 지닌 뛰어난 인력들이 <br>고객의 비즈니스에 도움을 드립니다.</p>
+          <div class="sub_visual">
+            <img src="img/sub01_visual.jpg" alt="회사소개 이미지">
+          </div><!--.sub_visual-->
+          <h3>KD M&C를 찾아주신 고객 여러분께 <br>
+            감사의 인사를 드립니다.</h3>
+          <p class="txt">저희 KD M&C는 전문가들의 집단으로 시공, 유지보수 등 <br>
+            설비분야에서 높은수준의 서비스를 제공하여<br>
+            고객의 비즈니스에 도움을 드립니다.    </p>
+          <p class="txt">다양한 경험을 가진 뛰어난 인재들이<br>
+            고객이 감동할 수 있는 차별화된 서비스를 제공하고자 노력하고 있습니다.<br>
+            앞으로도 고객의 신뢰를 받는 기업이 되도록 더욱 매진하겠습니다.    </p>
+        </div><!--.inner-->
+      </div><!--.intro-->
+  
+      <div class="value">
+        <div class="inner clear">
+          <div><p>수평적 문화</p></div>
+          <div><p>전문적 지식</p></div>
+          <div><p>고객과의 소통</p></div>
+        </div><!--.inner-->
+      </div><!--.value-->
+  
+    </div><!--#sub_container-->
+  
+    <footer>
+      <div class="inner">
+        <div class="f_info">
+          <address>주소 : 경기도 수원시 영통구 덕영대로 1234 KD M&C</address>
+          <p><span>TEL : 031-123-1234</span><span>FAX : 031-123-1234</span></p>
+          <p>Copyright (c)2021 KD M&C All rights reserved.</p>
+        </div><!--#f_info-->
+      </div><!--#inner-->
+    </footer>
+    
+    
+    <a href="#" class="go_top">맨위로이동</a>
+  
+    </form>
+    </div><!--#wrap-->
+</body>
+</html>
